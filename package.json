@@ -1,0 +1,38 @@
+{
+  "name": "portafolio-td",
+  "version": "1.0.0",
+  "description": "Portafolio Talento Digital - Esteban Soto",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emkauno/portafolio-td.git"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.4",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel liveserver watch",
+    "liveserver": "live-server",
+    "watch": "node-sass sass/main.scss assets/css/style.css -w",
+    "compile": "node-sass sass/main.scss assets/css/style.css",
+    "prefix": "postcss assets/css/style.css --use autoprefixer -o assets/css/style.css",
+    "compress": "node-sass assets/css/style.css assets/css/style.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress"
+  },
+  "keywords": [
+    "Portafolio",
+    "talento",
+    "digital",
+    "emkauno"
+  ],
+  "author": "Esteban Soto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emkauno/portafolio-td/issues"
+  }
+}
