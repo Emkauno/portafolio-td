@@ -1,0 +1,17 @@
+.carousel {
+  .carousel-inner {
+    .carousel-item {
+      @media (max-width: 765px) {
+        bottom: 0;
+      }
+      img {
+        width: 100%;
+        @media (max-width: 765px) {
+          bottom: 0;
+          height: 100% !important;
+          width: unset !important;
+        }
+      }
+    }
+  }
+}
